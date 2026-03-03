@@ -9,5 +9,5 @@ set (FILTER_SRC
         white_list_filter.cpp
 )
 add_library (filter OBJECT ${FILTER_SRC})
-target_link_libraries (filter PRIVATE fmt::fmt coverage_config)
+target_link_libraries (filter PRIVATE fmt::fmt-header-only coverage_config)
 maybe_add_dependencies (filter spdlog)

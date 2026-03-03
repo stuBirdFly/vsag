@@ -4,6 +4,7 @@ include(FetchContent)
 # suppress "stringop-overflow" warning which caused by a compiler bug in gcc 10 or earlier
 # ref: https://github.com/fmtlib/fmt/issues/2708
 set (FMT_SYSTEM_HEADERS ON)
+set (FMT_INSTALL ON CACHE BOOL "Install fmt with vsag install" FORCE)
 
 FetchContent_Declare(
     fmt
@@ -17,7 +18,6 @@ FetchContent_Declare(
     TIMEOUT 30
 )
 
-# exclude fmt in vsag installation
 FetchContent_GetProperties(fmt)
 if(NOT fmt_POPULATED)
   FetchContent_Populate(fmt)

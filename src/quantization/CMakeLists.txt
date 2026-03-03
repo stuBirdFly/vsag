@@ -25,6 +25,6 @@ set (QUANTIZER_SRC
 )
 
 add_library (quantizer OBJECT ${QUANTIZER_SRC})
-target_link_libraries(quantizer PUBLIC fmt::fmt coverage_config)
+target_link_libraries(quantizer PUBLIC fmt::fmt-header-only coverage_config)
 
 maybe_add_dependencies (quantizer spdlog openblas mkl)

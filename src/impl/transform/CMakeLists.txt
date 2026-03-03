@@ -10,5 +10,5 @@ set (TRANSFORM_SRC
         pca_transformer.h
 )
 add_library (transform OBJECT ${TRANSFORM_SRC})
-target_link_libraries (transform PUBLIC fmt::fmt coverage_config)
+target_link_libraries (transform PUBLIC fmt::fmt-header-only coverage_config)
 maybe_add_dependencies (transform spdlog openblas mkl)
